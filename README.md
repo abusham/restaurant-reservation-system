@@ -78,6 +78,5 @@ pnpm build
 #### • Bulk Operations - No bulk update endpoint exists for disabling multiple branches simultaneously. Currently, the application makes parallel API calls when disabling all reservations, which could hit rate limits with many branches. A batch endpoint like PUT /branches/bulk would be more efficient.
 #### • Table Reservation Settings - Based on the API documentation, there's no apparent way to update the accepts_reservations flag on individual tables within sections. The edit modal shows tables that already accept reservations, but cannot toggle this setting. This would require endpoints like PUT /sections/:id/tables/:id with updatable accepts_reservations field.
 
-## Final notes
-#### • Provided demo URL is hosted on a personal AWS Amplify account, and token is being read from environment variables so it doesn't get exposed.
+## Final note
 #### • The github repo is public at the moment only to allow sharing it with Foodics team.

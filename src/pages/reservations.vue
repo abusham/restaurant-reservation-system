@@ -7,6 +7,7 @@ import AddBranchesModal from "@/components/modals/AddBranchesModal.vue";
 import { useReservations } from "@/composables/useReservations";
 
 const {
+  branchesWithReservations,
   branchesWithoutReservations,
   fetchBranches,
   enableBranchReservations,
@@ -69,7 +70,11 @@ const handleAddBranches = async (branchIds: string[]) => {
     <div class="bg-white py-5 border-b border-gray-200">
       <div class="container-wrapper flex flex-row items-center justify-between">
         <p class="text-font text-2xl font-semibold">Reservations</p>
-        <BaseButton variant="primary" @click="openDisableConfirmation">
+        <BaseButton
+          v-if="branchesWithReservations && branchesWithReservations.length > 0"
+          variant="primary"
+          @click="openDisableConfirmation"
+        >
           Disable Reservations
         </BaseButton>
       </div>
