@@ -1,0 +1,32 @@
+@use "./_fonts.scss" as *;
+@use "./_toastify.scss" as *;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//--------------------------------------//
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.container-wrapper {
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+@media (max-width: 768px) {
+  .container-wrapper {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container-wrapper {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
